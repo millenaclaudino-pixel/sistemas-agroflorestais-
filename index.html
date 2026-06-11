@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistemas Agroflorestais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- CONTROLE DE FONTE -->
+  <div class="font-controls">
+    <button onclick="mudarFonte(-2)">A-</button>
+    <button onclick="mudarFonte(2)">A+</button>
+  </div>
+
+  <!-- PÁGINAS INICIAIS -->
+  <section class="page active" id="page1">
+    <h1>Sistemas Agroflorestais</h1>
+    <p>
+      Sistemas agroflorestais são formas de uso da terra que combinam árvores,
+      culturas agrícolas e até criação de animais em uma mesma área. Essa prática
+      busca aumentar a produtividade de forma sustentável, respeitando o meio ambiente
+      e promovendo equilíbrio ecológico.
+    </p>
+    <button onclick="nextPage()">Próxima</button>
+  </section>
+
+  <section class="page" id="page2">
+    <h1>Importância</h1>
+    <p>
+      Esses sistemas ajudam na conservação do solo, reduzem a erosão, aumentam a
+      biodiversidade e melhoram o microclima. Além disso, permitem maior diversidade
+      de renda para agricultores familiares e grandes produtores.
+    </p>
+    <button onclick="prevPage()">Voltar</button>
+    <button onclick="nextPage()">Próxima</button>
+  </section>
+
+  <section class="page" id="page3">
+    <h1>Exemplos e Aplicações</h1>
+    <p>
+      Um exemplo comum é o cultivo de café sob sombra de árvores nativas.
+      Outro exemplo é o consórcio de milho com árvores frutíferas.
+      Esses modelos tornam a produção mais sustentável e resiliente.
+    </p>
+    <button onclick="prevPage()">Voltar</button>
+    <button onclick="startQuiz()">Iniciar Quiz</button>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="page" id="quiz">
+
+    <h1>Quiz - Sistemas Agroflorestais</h1>
+
+    <div id="quiz-box">
+      <h2 id="question"></h2>
+      <div id="answers"></div>
+    </div>
+
+  </section>
+
+  <!-- RESULTADO -->
+  <section class="page" id="result">
+    <h1>Resultado Final</h1>
+    <p id="scoreText"></p>
+    <h2 id="congrats"></h2>
+    <button onclick="restart()">Reiniciar</button>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
